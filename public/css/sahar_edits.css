@@ -1,0 +1,60 @@
+.create-quiz-form {
+    width: 100%;
+    margin: 8rem auto;
+}
+
+.all-quizzes-table {
+    width: 85%;
+    margin: 8rem auto;
+}
+
+.all-quizzes-table img {
+    width: 100px;
+    height: 100px;
+}
+
+.questions-table {
+    width: 90%;
+    margin-top: 8rem;
+    margin-left: 1rem;
+}
+
+.sahar-card-header {
+    background-color: #6F876A!important;
+    color: white;
+    width: 100%;
+}
+
+.register-form {
+    margin-top: 3rem;
+}
+
+.register-form .card-body {
+    margin-top: 2rem;
+}
+
+.sahar-card {
+    padding: 0;
+    height: fit-content;
+}
+
+.btn-sahar {
+    background-color: #6F876A;
+    color: white;
+}
+
+.profile-image-s label {
+    width: 60px;
+    margin-right: 1.3rem;
+}
+
+.user-info-sahar li {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.user-info-sahar li img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
