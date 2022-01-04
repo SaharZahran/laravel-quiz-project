@@ -41,7 +41,7 @@
                                 <li> <i class="far fa-book-open"></i><span class="mx-1 ahmad">{{$quiz->number_of_question}}</span><span class="dm-none ahmad">Question</span></li>
                                 <li> <i class="far fa-history"></i><span class="mx-1 ahmad">{{$quiz->quiz_time}}</span><span class="dm-none ahmad">Minutes</span></li>
                                 @auth
-                                <li><a href="{{'instructions'}}" id="quizStart1" class="btn primaryBtn start-btn ">Start</a></li>
+                                <li><a href="{{route('instructions', ['id' => $quiz->id])}}" id="quizStart1" class="btn primaryBtn start-btn ">Start</a></li>
                                 @endauth
                                 @guest
                                 <form action="/register" method="get">

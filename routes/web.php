@@ -4,6 +4,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\QuizController;
+use App\Http\Controllers\ResultController;
 use App\Http\Controllers\SingleQuizController;
 use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
@@ -49,8 +50,11 @@ Route::middleware(['isAdmin'])->group(function () {
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('instructions/{id}', function(){
-        return view('publicsite.instructions');
+    Route::get('instructions/{id}', function($id){
+        return view('publicsite.instructions', compact('id'));
     })->name('instructions');
+
+    Route::resource('singlequiz', SingleQuizController::class);
+    Route::resource('result', ResultController::class);
 });
 

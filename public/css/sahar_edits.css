@@ -58,3 +58,59 @@
     height: 60px;
     border-radius: 50%;
 }
+
+.question-form {
+    padding: 1rem;
+}
+
+.question-form .sahar-all-answers li input {
+    opacity: 0;
+}
+
+.sahar-all-answers {
+    background-color: rgba(170, 170, 170, 0.192);
+    margin-bottom: 3rem;
+    margin-top: 0;
+}
+
+.sahar-answer {
+    cursor: pointer;
+    padding: 1rem 20rem 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: rgba(170, 170, 170, 0);
+}
+
+.chosed-answer:checked+label {
+    background-color: #D1E0D3;
+}
+
+.sahar-question {
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-bottom: 1px solid rgb(226, 226, 226);
+    background-color: rgba(170, 170, 170, 0.192);
+    width: 1050px;
+    padding-left: 1rem;
+}
+
+.my-button {
+    text-align: left;
+    padding: 1rem 3rem;
+    width: fit-content;
+}
+
+.result-table {
+    margin-top: 3rem;
+}
+
+.result-table thead,
+.back-sahar {
+    background-color: #809979;
+    color: white;
+}
+
+.result-table th,
+.result-table td {
+    padding: 1rem;
+}

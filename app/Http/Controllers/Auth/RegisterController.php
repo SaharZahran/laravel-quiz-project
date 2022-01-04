@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Dashboard;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -72,5 +73,7 @@ class RegisterController extends Controller
             'role_type' => $data['role_type'],
             'password' => Hash::make($data['password']),
         ]);
+        // $all_quzzies = Dashboard::all();
+        // return view('publicsite.dashboard', compact('all_quzzies'));
     }
 }

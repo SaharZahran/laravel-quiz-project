@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
 
 class Dashboard extends Model
 {
@@ -16,5 +17,10 @@ class Dashboard extends Model
     ];
     public function question(){
         return $this->hasMany(Question::class);
+    }
+    
+    public function user()
+    {
+        return $this->belongsToMany(User::class);
     }
 }

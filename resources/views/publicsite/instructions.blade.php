@@ -21,8 +21,8 @@
         </div>
     </div>
     <div class="buttons">
-        <button class="btn borderBtn btn-width mt-1 me-1 quit"><a href="{{route('dashboard.index')}}">Exit Quiz</a></button>
-        <button class="btn primaryBtn btn-width mt-1 me-1 restart">Continue</button>
+        <button class="btn borderBtn btn-width mt-1 me-1 quit"><a href='{{route("dashboard.index")}}'>Exit Quiz</a></button>
+        <a class="btn primaryBtn btn-width mt-1 me-1 restart" href='{{route("singlequiz.index", ["id" => $id])}}'>Continue</a>
     </div>
 </div>
 @endsection

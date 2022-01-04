@@ -4,24 +4,25 @@ namespace App\Http\Controllers;
 
 use App\Models\Dashboard;
 use App\Models\Question;
+use App\Models\QuizUser;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class SingleQuizController extends Controller
+class ResultController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        $counter = 1;
-        $num_of_question = 1;
-        $quiz = Dashboard::where('id', '=', $request->id)->first();
-        $all_questions = Question::where('quiz_id', '=', $request->id)->get();
-        return view('publicsite.quiz', compact('all_questions', 'quiz', 'counter', 'num_of_question'));
+        $num_of_quizzes = 1;
+        $user_result = QuizUser::where('user_id', '=', Auth::user()->id)->get();
+        return view('publicsite.user_result', compact('user_result', 'num_of_quizzes', 'myclass'));
     }
 
+    
     /**
      * Show the form for creating a new resource.
      *
@@ -40,9 +41,31 @@ class SingleQuizController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $quiz = Dashboard::where('id', '=', $request->id)->first();
+        $questions = Question::where('quiz_id', '=', $quiz->id)->get();
+        $user_marks = 0;
+        $number_of_question = 1;
+        $result = '';
+        foreach ($questions as $question) {
+            $current_question = "question".$number_of_question;
+            if($question->right_answer === $request->$current_question){
+                $user_marks++;
+            }
+            $number_of_question++;
+        }
+        if($user_marks >= $quiz->number_of_questions/2){
+            $result = 'success';
+        }else{
+            $result = 'fail';
+        }
+        QuizUser::create([
+            'user_id' => Auth::user()->id,
+            'quiz_id' => $request->id,
+            'marks'  => $user_marks,
+            'result' => $result
+        ]);
+        return redirect()->route('result.index');
     }
-
     /**
      * Display the specified resource.
      *
@@ -74,7 +97,7 @@ class SingleQuizController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
     }
 
     /**

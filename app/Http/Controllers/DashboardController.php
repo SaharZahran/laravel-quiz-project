@@ -39,7 +39,7 @@ class DashboardController extends Controller
     {
         //
     }
-
+    
     /**
      * Display the specified resource.
      *
