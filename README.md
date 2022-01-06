@@ -3,18 +3,13 @@
 ## Synopsis
 A website for Online Quizzes.
 
-## Contributors
-1. Ahmad Marwan Kilani.
-2. Haitham Assoli.
-3. Mohammad abualhaj (Project Owner).
-4. Sarah Hasan.
-5. Sahar Zahran (Scrum Master).
-
 ## Technologies
 1. HTML5.
 2. CSS3.
 3. Javascript.
 4. Bootstrap.
+5. Laravel 8.
+6. MySQL.
 
 ## Tools
 1. Google Chrome.
@@ -31,5 +26,3 @@ https://miro.com/app/board/o9J_lnIr0VQ=/
 ## Mockup
 Quiz Online Project Mockup.pdf
 
-## Trello
-https://trello.com/b/FJP44Z78/online-quiz-website
