@@ -1,4 +1,4 @@
-# Project2_Online_Quiz_Website
+# Project6: Laravel-Quiz-Project
 
 ## Synopsis
 A website for Online Quizzes.
