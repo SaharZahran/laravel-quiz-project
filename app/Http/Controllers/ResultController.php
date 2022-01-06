@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Dashboard;
+use App\Models\DashboardUser;
 use App\Models\Question;
-use App\Models\QuizUser;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+
 
 class ResultController extends Controller
 {
@@ -15,11 +17,13 @@ class ResultController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $all_quizzes = Dashboard::all();
+        $all_users = User::all();
         $num_of_quizzes = 1;
-        $user_result = QuizUser::where('user_id', '=', Auth::user()->id)->get();
-        return view('publicsite.user_result', compact('user_result', 'num_of_quizzes', 'myclass'));
+        $user_result = DashboardUser::where('user_id', '=', Auth::user()->id)->get();
+        return view('publicsite.user_result', compact('user_result', 'num_of_quizzes', 'all_quizzes', 'all_users'));
     }
 
     
@@ -58,13 +62,21 @@ class ResultController extends Controller
         }else{
             $result = 'fail';
         }
-        QuizUser::create([
+        DashboardUser::create([
             'user_id' => Auth::user()->id,
             'quiz_id' => $request->id,
             'marks'  => $user_marks,
             'result' => $result
         ]);
-        return redirect()->route('result.index');
+        if($result === 'fail'){
+            $image = 'bad.jpg';
+            $class = 'red-class';
+        }else{
+            $image = 'good.jpg';
+            $class = 'green-class';
+        }
+        $quiz_questions = $quiz->number_of_questions;
+       return view('publicsite.show_result', compact('result', 'user_marks', 'image', 'quiz_questions', 'class'));
     }
     /**
      * Display the specified resource.
@@ -72,9 +84,8 @@ class ResultController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
-        //
     }
 
     /**
@@ -83,7 +94,7 @@ class ResultController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
         //
     }
@@ -108,6 +119,8 @@ class ResultController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $result = DashboardUser::find($id);
+        $result->delete();
+        return redirect()->route('result.index');
     }
 }

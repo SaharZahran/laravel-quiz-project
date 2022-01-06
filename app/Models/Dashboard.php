@@ -24,3 +24,5 @@ class Dashboard extends Model
         return $this->belongsToMany(User::class);
     }
 }
+
+

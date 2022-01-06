@@ -12,14 +12,6 @@
   </div>
   <div class="container result">
     <div class="row inner-page">
-      <div class="d-flex justify-content-between align-items-center">
-        <div><span class="timer timer_sec me-2"></span> <span class="time_left_txt"> Time left</span></div>
-        <div><a href="{{route('dashboard.index')}}" class="btn primaryBtn">Start Over</a></div>
-      </div>
-      <div class="col-lg-12 ">
-        <div class="time_line"></div>
-
-      </div>
       <form action='{{route("result.store")}}' method="POST" class="question-form">
         @csrf
         @foreach($all_questions as $question)

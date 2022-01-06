@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateQuizUsersTable extends Migration
+class CreateDashboardUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,20 +13,20 @@ class CreateQuizUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('quiz_users', function (Blueprint $table) {
-
+        Schema::create('dashboard_users', function (Blueprint $table) {
+            $table->id();
             $table->unsignedBigInteger('quiz_id');
             $table->unsignedBigInteger('user_id');
             $table->integer('marks');
             $table->string('result');
             $table->timestamps();
             $table->foreign('quiz_id')
-            ->references('id')
-            ->on('dashboards');
-            
+                ->references('id')
+                ->on('dashboards');
+
             $table->foreign('user_id')
-            ->references('id')
-            ->on('users');
+                ->references('id')
+                ->on('users');
         });
     }
 
@@ -37,6 +37,6 @@ class CreateQuizUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('quiz_users');
+        Schema::dropIfExists('dashboard_users');
     }
 }

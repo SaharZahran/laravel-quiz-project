@@ -1,116 +1,171 @@
-.create-quiz-form {
-    width: 100%;
-    margin: 8rem auto;
-}
-
-.all-quizzes-table {
-    width: 85%;
-    margin: 8rem auto;
-}
-
-.all-quizzes-table img {
-    width: 100px;
-    height: 100px;
-}
-
-.questions-table {
-    width: 90%;
-    margin-top: 8rem;
-    margin-left: 1rem;
-}
-
-.sahar-card-header {
-    background-color: #6F876A!important;
-    color: white;
-    width: 100%;
-}
-
-.register-form {
-    margin-top: 3rem;
-}
-
-.register-form .card-body {
-    margin-top: 2rem;
-}
-
-.sahar-card {
-    padding: 0;
-    height: fit-content;
-}
-
-.btn-sahar {
-    background-color: #6F876A;
-    color: white;
-}
-
-.profile-image-s label {
-    width: 60px;
-    margin-right: 1.3rem;
-}
-
-.user-info-sahar li {
-    display: inline-block;
-    margin-right: 0.5rem;
-}
-
-.user-info-sahar li img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-}
-
-.question-form {
-    padding: 1rem;
-}
-
-.question-form .sahar-all-answers li input {
-    opacity: 0;
-}
-
-.sahar-all-answers {
-    background-color: rgba(170, 170, 170, 0.192);
-    margin-bottom: 3rem;
-    margin-top: 0;
-}
-
-.sahar-answer {
-    cursor: pointer;
-    padding: 1rem 20rem 1rem 2rem;
-    font-size: 1.2rem;
-    background-color: rgba(170, 170, 170, 0);
-}
-
-.chosed-answer:checked+label {
-    background-color: #D1E0D3;
-}
-
-.sahar-question {
-    font-size: 1.5rem;
-    font-weight: bold;
-    border: none;
-    border-bottom: 1px solid rgb(226, 226, 226);
-    background-color: rgba(170, 170, 170, 0.192);
-    width: 1050px;
-    padding-left: 1rem;
-}
-
-.my-button {
-    text-align: left;
-    padding: 1rem 3rem;
-    width: fit-content;
-}
-
-.result-table {
-    margin-top: 3rem;
-}
-
-.result-table thead,
-.back-sahar {
-    background-color: #809979;
-    color: white;
-}
-
-.result-table th,
-.result-table td {
-    padding: 1rem;
-}
+    .create-quiz-form {
+        width: 100%;
+        margin: 8rem auto;
+    }
+    
+    .all-quizzes-table {
+        width: 85%;
+        margin: 8rem auto;
+    }
+    
+    .all-quizzes-table img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .questions-table {
+        width: 90%;
+        margin-top: 8rem;
+        margin-left: 1rem;
+    }
+    
+    .sahar-card-header {
+        background-color: #6F876A!important;
+        color: white;
+        width: 100%;
+    }
+    
+    .register-form {
+        margin-top: 3rem;
+    }
+    
+    .register-form .card-body {
+        margin-top: 2rem;
+    }
+    
+    .sahar-card {
+        padding: 0;
+        height: fit-content;
+    }
+    
+    .btn-sahar {
+        background-color: #6F876A;
+        color: white;
+    }
+    
+    .profile-image-s label {
+        width: 60px;
+        margin-right: 1.3rem;
+    }
+    
+    .user-info-sahar li {
+        display: inline-block;
+        margin-right: 0.5rem;
+    }
+    
+    .user-info-sahar li img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+    
+    .question-form {
+        padding: 1rem;
+    }
+    
+    .question-form .sahar-all-answers li input {
+        opacity: 0;
+    }
+    
+    .sahar-all-answers {
+        background-color: rgba(170, 170, 170, 0.192);
+        margin-bottom: 3rem;
+        margin-top: 0;
+    }
+    
+    .sahar-answer {
+        cursor: pointer;
+        padding: 1rem 20rem 1rem 2rem;
+        font-size: 1.2rem;
+        background-color: rgba(170, 170, 170, 0);
+    }
+    
+    .chosed-answer:checked+label {
+        background-color: #D1E0D3;
+    }
+    
+    .sahar-question {
+        font-size: 1.5rem;
+        font-weight: bold;
+        border: none;
+        border-bottom: 1px solid rgb(226, 226, 226);
+        background-color: rgba(170, 170, 170, 0.192);
+        width: 1050px;
+        padding-left: 1rem;
+    }
+    
+    .my-button {
+        text-align: left;
+        padding: 1rem 3rem;
+        width: fit-content;
+    }
+    
+    .result-table {
+        margin-top: 3rem;
+    }
+    
+    .result-table thead,
+    .back-sahar {
+        background-color: #809979;
+        color: white;
+    }
+    
+    .result-table th,
+    .result-table td {
+        padding: 1rem;
+    }
+    
+    .user_image_profile {
+        width: 50%;
+    }
+    
+    .user_profile {
+        margin-top: 5rem;
+        color: rgb(97, 96, 96);
+    }
+    
+    .user_profile .col-4 {
+        border-right: 1px solid gray;
+    }
+    
+    .user_profile .info-user {
+        font-size: 1.4rem;
+    }
+    
+    .user_profile .right-li {
+        font-size: 1rem;
+    }
+    
+    .user_profile h2 {
+        border-bottom: 1px solid gray;
+        font-size: 1.5rem;
+    }
+    
+    .user_profile table {
+        border-bottom: 1px solid gray;
+    }
+    
+    .user-profile-image {
+        width: 15%;
+    }
+    
+    .trash i {
+        color: gray;
+        font-size: 1.1rem;
+    }
+    
+    .trash {
+        border: none;
+    }
+    
+    .input-group-text {
+        width: 50px;
+    }
+    
+    .red-class {
+        color: rgb(219, 38, 38);
+    }
+    
+    .green-class {
+        color: rgb(66, 136, 66);
+    }

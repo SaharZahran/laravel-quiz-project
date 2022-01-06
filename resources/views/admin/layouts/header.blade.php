@@ -109,7 +109,7 @@
                                 <i class="fas fa-tachometer-alt"></i>Questions</a>
                         </li>
                         <li class="has-sub">
-                            <a class="js-arrow" href="#">
+                            <a class="js-arrow" href="{{route('result.index')}}">
                                 <i class="fas fa-tachometer-alt"></i>User Results</a>
                         </li>
                         </li>
@@ -157,9 +157,10 @@
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__body">
-                                            <div class="account-dropdown__footer">
-                                                <a href="{{'/'}}">
-                                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                                                <div class="account-dropdown__footer">
+                                                    <a href="{{'/'}}">
+                                                        <i class="zmdi zmdi-power"></i>Logout</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -167,6 +168,5 @@
                             </div>
                         </div>
                     </div>
-                </div>
             </header>
             <!-- HEADER DESKTOP-->

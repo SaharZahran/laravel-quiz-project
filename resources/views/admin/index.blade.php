@@ -21,8 +21,7 @@
                                     <i class="zmdi zmdi-account-o"></i>
                                 </div>
                                 <div class="text">
-                                    <h2>Admins</h2>
-                                    <span>{{}}</span>
+                                    <h2>Number of Admins</h2>
                                 </div>
                             </div>
                             <div class="overview-chart">
@@ -39,8 +38,7 @@
                                     <i class="zmdi zmdi-shopping-cart"></i>
                                 </div>
                                 <div class="text">
-                                    <h2>388,688</h2>
-                                    <span>items solid</span>
+                                    <h2>Number of Users</h2>
                                 </div>
                             </div>
                             <div class="overview-chart">
@@ -57,8 +55,7 @@
                                     <i class="zmdi zmdi-calendar-note"></i>
                                 </div>
                                 <div class="text">
-                                    <h2>1,086</h2>
-                                    <span>this week</span>
+                                    <h2>All Quizzes</h2>
                                 </div>
                             </div>
                             <div class="overview-chart">
@@ -75,8 +72,7 @@
                                     <i class="zmdi zmdi-money"></i>
                                 </div>
                                 <div class="text">
-                                    <h2>$1,060,386</h2>
-                                    <span>total earnings</span>
+                                    <h2>Number of taken Quizzes</h2>
                                 </div>
                             </div>
                             <div class="overview-chart">

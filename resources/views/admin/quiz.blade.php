@@ -30,7 +30,7 @@
                     @foreach($all_quizzes as $quiz)
                     <tr class="tr-shadow">
                         <td>{{$quiz->quiz_name}}</td>
-                        <td><img src="{{$quiz->quiz_image}}" alt=""></td>
+                        <td><img src="{{asset('assets/public_images/'.$quiz->quiz_image)}}" alt=""></td>
                         <td>{{$quiz->quiz_time}}</td>
                         <td>{{$quiz->number_of_questions}}</td>
                         <td>

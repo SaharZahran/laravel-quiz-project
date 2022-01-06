@@ -23,7 +23,7 @@
             </a>
             <ul class="navbar-nav me-auto ">
                 <li class="nav-item me-3">
-                    <a class="nav-link" aria-current="page" href="{{route('dashboard.index')}}">Quizes</a>
+                    <a class="nav-link" aria-current="page" href="{{route('dashboard.index')}}">Quizzes</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('about')}}">About</a>
@@ -35,26 +35,26 @@
                 <a href="{{route('register')}}" class="btn primaryBtn">Sign Up</a>
                 @else
                 <!--  -->
-                    <ul class="user-info-sahar">
-                        <li>
-                            <img src="{{asset('assets/public_images/' . Auth::user()->image)}}" alt="user image">
-                        </li>
-                        <li>
-                            <a href="{{'/user_profile'}}" role="button">
-                                {{ Auth::user()->name }}
-                            </a>
-                        </li>
-                        <li>
-                            <a class="btn primaryBtn" href="{{ route('logout') }}" onclick="event.preventDefault();
+                <ul class="user-info-sahar">
+                    <li>
+                        <a href="{{route('user_profile.index')}}"><img src="{{asset('assets/public_images/' . Auth::user()->image)}}" alt="user image"></a>
+                    </li>
+                    <li>
+                        <a href="{{'/user_profile'}}" role="button">
+                            {{ Auth::user()->name }}
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn primaryBtn" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                              document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
-        
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
-                            </form>
-                        </li>
-                    </ul>
+                            {{ __('Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </li>
+                </ul>
                 @endif
             </div>
         </div>

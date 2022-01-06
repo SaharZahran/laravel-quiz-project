@@ -40,7 +40,7 @@
                         <label for="text-input" class=" form-control-label">Password</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <input type="password" id="text-input" value="{{$user->email}}" class="form-control" name="password">
+                        <input type="password" id="text-input" value="{{$user->password}}" class="form-control" name="password">
                     </div>
                 </div>
                 <input type="hidden" name="role_type" value="admin">

@@ -623,3 +623,8 @@ input:checked+label {
         display: none;
     }
 }
+
+.sahar-image-result {
+    width: 30% !important;
+    margin-top: 5rem;
+}

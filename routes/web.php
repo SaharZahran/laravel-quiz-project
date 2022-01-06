@@ -5,8 +5,9 @@ use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\QuizController;
 use App\Http\Controllers\ResultController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\SingleQuizController;
-use Illuminate\Routing\RouteGroup;
+use App\Http\Controllers\UserProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -41,9 +42,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::middleware(['isAdmin'])->group(function () {
-
     //admin routes
-
     Route::get('/admin', function () {
         return view('admin.index');
     })->name('adminIndex');
@@ -53,8 +52,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('instructions/{id}', function($id){
         return view('publicsite.instructions', compact('id'));
     })->name('instructions');
-
     Route::resource('singlequiz', SingleQuizController::class);
     Route::resource('result', ResultController::class);
+    Route::resource('user_profile', UserProfileController::class);
 });
 

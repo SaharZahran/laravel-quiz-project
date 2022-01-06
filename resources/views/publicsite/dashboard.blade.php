@@ -24,7 +24,7 @@
     @endif
     <div class="container ">
         <div class="quizes-title">
-            <div class="quize-bold">Quizes</div>
+            <div class="quize-bold">Quizzes</div>
             <div class="quize-des">Test your knowledge</div>
         </div>
         <div class="row quizes-padding ">
